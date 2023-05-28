@@ -35,7 +35,7 @@ def mapper(line):
     info = {}
     data = json.loads(line)
     info['user'] = data['user_day_code']
-    info['user_type'] = data['user_type']
+    info['user_type'] = int(data['user_type'])
     info['ageRange'] = int(data['ageRange'])
     info['start'] = data['idunplug_station']
     info['end'] = data['idplug_station']
